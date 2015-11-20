@@ -9,7 +9,7 @@ window.onload = function (){
 }
 
 $.ajax({
-url: 'http://localhost:9292/baby_tiger',
+url: '/baby_tiger',
 type: "GET",
 dataType: 'json',
 success: function(data) {
@@ -24,7 +24,7 @@ fail: function(error) {
 });
 
 $.ajax({
-  url: 'http://localhost:9292/sasha',
+  url: '/sasha',
   type: "GET",
   dataType: 'json',
   success: function(sasha_data) {
@@ -39,7 +39,7 @@ $.ajax({
 });
 
 $.ajax({
-  url: 'http://localhost:9292/squirrel',
+  url: '/squirrel',
   type: "GET",
   dataType: 'json',
   success: function(squirrel_data) {
@@ -53,7 +53,7 @@ $.ajax({
 });
 
 $.ajax({
-  url: 'http://localhost:9292/sea_lion',
+  url: '/sea_lion',
   type: "GET",
   dataType: 'json',
   success: function(sea_lion_data){
@@ -67,7 +67,7 @@ $.ajax({
 });
 
 $.ajax({
-  url: 'http://localhost:9292/goat',
+  url: '/goat',
   type: "GET",
   dataType: 'json',
   success: function(goat_data) {
