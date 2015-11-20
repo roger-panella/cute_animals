@@ -1,0 +1,99 @@
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<h1>Cute Animals!</h1>
+
+
+<script type="text/javascript">
+window.onload = function (){
+}
+
+$.ajax({
+url: 'http://localhost:9292/baby_tiger',
+type: "GET",
+dataType: 'json',
+success: function(data) {
+   console.log("'" + data.picture_url + "'");
+   var picture = document.createElement('img');
+   document.getElementById('tiger_pic').appendChild(picture);
+   picture.src = data.picture_url;
+},
+fail: function(error) {
+  console.log('NO');
+}
+});
+
+$.ajax({
+  url: 'http://localhost:9292/sasha',
+  type: "GET",
+  dataType: 'json',
+  success: function(sasha_data) {
+    var sasha_picture = document.createElement('img');
+    document.getElementById('sasha_pic').appendChild(sasha_picture);
+    sasha_picture.src = sasha_data.picture_url;
+    sasha_picture.style.height = '200px';
+  },
+  fail: function(error) {
+    console.log('NO');
+  }
+});
+
+$.ajax({
+  url: 'http://localhost:9292/squirrel',
+  type: "GET",
+  dataType: 'json',
+  success: function(squirrel_data) {
+    var squirrel_picture = document.createElement('img');
+    document.getElementById('squirrel_pic').appendChild(squirrel_picture);
+    squirrel_picture.src = squirrel_data.picture_url;
+  },
+  fail: function (error) {
+    console.log('NO');
+  }
+});
+
+$.ajax({
+  url: 'http://localhost:9292/sea_lion',
+  type: "GET",
+  dataType: 'json',
+  success: function(sea_lion_data){
+    var sea_lion_picture = document.createElement('img');
+    document.getElementById('sea_lion_pic').appendChild(sea_lion_picture);
+    sea_lion_picture.src = sea_lion_data.picture_url;
+  },
+  fail: function (error) {
+    console.log('NO');
+  }
+});
+
+$.ajax({
+  url: 'http://localhost:9292/goat',
+  type: "GET",
+  dataType: 'json',
+  success: function(goat_data) {
+    var goat_picture = document.createElement('img');
+    document.getElementById('goat_pic').appendChild(goat_picture);
+    goat_picture.src = goat_data.picture_url;
+  },
+  fail: function (error) {
+    console.log('NO');
+  }
+});
+
+</script>
+
+
+<div id='tiger_pic'>
+</div>
+
+<div id='sasha_pic'>
+</div>
+
+<div id = 'squirrel_pic'>
+</div>
+
+<div id = 'sea_lion_pic'>
+</div>
+
+<div id = 'goat_pic'>
+</div>
